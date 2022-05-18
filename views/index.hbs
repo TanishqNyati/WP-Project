@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<htsml lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Plantstation E-commerce website</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="header">
+    <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="Images/sapling.png" width="120px">
+        <div class="logo-name">
+        <h2>PlantStation</h2>
+        </div>
+      </div>
+      <nav>
+        <!-- <input type="text" id="searchBar" oninput="Search((this.value).toLowerCase())" placeholder="Search.."> -->
+        <span class="topnav">
+         <input type="text" placeholder="Search..">
+        </span>
+        </ul> 
+        <ul id="MenuItems">
+          <li><a href="/" class="btn1">Home</a></li>
+          <li><a href="/products" class="btn1">Products</a></li> 
+          <li><a href="/productdetails" class="btn1">Product Details</a></li>
+          <li><a href="#footer" class="btn1">Contacts</a></li>
+          <li><a href="/account" class="btn1">Account</a></li>
+
+          <li><a href="/login" class="btn1">Login/Sign Up</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html">
+      <img src="Images/cart.png"   width="30px" height="30px">
+      </a>
+      <img src="menu.png" class="menu-icon" 
+      onclick="menutoggle">
+    </div>
+    <div class="row">
+        <div class="col-2">
+          <h1>Plantation the dying hobby</h1>
+          <p>This is a testing sentence<br>Just for learning purposes</p>
+          <a href="" class="btn">Explore Now &#8594;</a>
+        </div>
+        <div class="col-2">
+          <img class="Images/heading-image"src="Images/peace lily.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------featured categories------>
+    <div class="categories">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3"><img src="Images/snake plant.jpg"></div>
+          <div class="col-3"><img src="Images/weeping fig.jpg"></div>
+          <div class="col-3"><img src="Images/rubber plant.jpg"></div>
+        </div>
+      </div>
+     
+    </div>
+
+    <!----featured products---->
+     <div class="small-container">
+       <h2 class="title">Featured Products</h2>
+       <div class="row">
+         <div class="col-4">
+           <img src="Images/aloe vero.jpg">
+           <h3>Aloe Vera</h3>
+           <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+           </div>
+           <p>Rs 699/-</p>
+           <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+         </div>
+
+         <div class="col-4">
+          <img src="Images/english ivy.jpg">
+          <h3>English Ivy</h3>
+          <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>Rs 1599/-</p>
+          <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+        </div>
+
+        <div class="col-4">
+          <img src="Images/dracena.jpg">
+          <h3>Dracena</h3>
+          <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-o"></i>
+           <i class="fa fa-star-o"></i>
+          </div>
+          <p>Rs 899/-</p>
+          <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+        </div>
+
+        <div class="col-4">
+          <img src="Images/areca palm.webp">
+          <h3>Areca Palm</h3>
+          <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-half-o"></i>
+           <i class="fa fa-star-o"></i>
+          </div>
+          <p>Rs 749/-</p>
+          <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+        </div>
+       </div>
+      <h2 class="title">Latest Products</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="Images/azalea.jpg">
+          <h3>Azaleza</h3>
+          <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star-o"></i>
+          </div>
+          <p>Rs 1799/-</p>
+          <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+        </div>
+
+        <div class="col-4">
+         <img src="Images/boston fern.jpg">
+         <h3>Boston fern</h3>
+         <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+         </div>
+         <p>Rs 549/-</p>
+         <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+       </div>
+
+       <div class="col-4">
+         <img src="Images/indian basil.jpg">
+         <h3>Indian basil</h3>
+         <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+         </div>
+         <p>Rs 999/-</p>
+         <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+       </div>
+
+       <div class="col-4">
+        <img src="Images/gerbera.jpg">
+        <h3>Gerbera</h3>
+        <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>Rs 999/-</p>
+        <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+      </div>
+
+      <div class="col-4">
+        <img src="Images/mass cane.png">
+        <h3>Mass Cane</h3>
+        <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-half-o"></i>
+         <i class="fa fa-star-o"></i>
+        </div>
+        <p>Rs 999/-</p>
+        <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+      </div>
+
+      <div class="col-4">
+        <img src="Images/sample.jpg">
+        <h3>Cactus</h3>
+        <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-o"></i>
+         <i class="fa fa-star-o"></i>
+        </div>
+        <p>Rs 999/-</p>
+        <a href="cart.html" class="btn" onclick="addtocart(item)">Add to cart &#8594;</a>
+      </div>
+
+       <div class="col-4">
+         <img src="Images/spider plant.webp">
+         <h3>Spider plant</h3>
+         <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+         </div>
+         <p>Rs 1999/-</p>
+         <a href="cart.html" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+       </div>
+      </div>
+     </div>
+
+     <!---Offer--->
+     
+       <div class="small-container">
+       <div class="row">
+         <div class="col-2">
+           <img src="Images/asparagus fern.jpg" class="offer-img">
+         </div>
+         <div class="col-2">
+           <p>Only available on Plantstation!!</p>
+           <h1>Asparagus fern</h1>
+           <small>Asparagus fern is an evergreen perennial with upright or long, trailing branches covered with tiny, thin leaves, which give it a bushy, feathery, fluffy appearance. The plants can have small flowers or berries. Native to Africa, asparagus fern also goes by these aliases: emerald fern, emerald feather, and lace fern.<br></small>
+           <a href="cart.html" class="btn">Buy Now &#8594;</a>
+         </div>
+       </div>
+     </div>
+
+     <!----Testimonial---->
+     <div class="testimonial">
+       <div class="small-container">
+         <div class="row">
+           <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+             <p>Testing data here, nothing to read</p>
+             <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+             </div>
+             <img src="Images/person1.jpg">
+             <h2>Akash Mathur</h2>
+           </div>
+
+           <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+             <p>Testing data here, nothing to read</p>
+             <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+             </div>
+             <img src="Images/person2.jpg">
+             <h2>Srishti Jain</h2>
+           </div>
+
+           <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+             <p>Testing data here, nothing to read</p>
+             <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+             </div>
+             <img src="Images/person3.jpg">
+             <h2>Anamika Kumar</h2>
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+    <!-----Footer----->
+    <div id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download our App</h3>
+            <p>Download app for android and ios devices.</p>
+            </div>
+          <div class="footer-col-2">
+            <div class="app-logo">
+              <img src="Images/play-store.png">
+              <img src="Images/app-store.png">
+              <p>Let's save the planet and plant more trees</p>
+              </div>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Return Policy</li>
+              <li>Join Prime</li>
+              <li>Blogs</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2020 - Planstation Limited</p>
+       </div>
+     </div>
+
+   <!---JS for toggle menu--->
+     <script>
+      var MenuItems = document.getElementById("MenuItems")
+      MenuItems.style.maxHeight="0px";
+      function menutoggle(){
+        if (MenuItems.style.maxHeight=="0px"){
+          MenuItems.style.maxHeight="200px";
+        }
+        else{
+          MenuItems.style.maxHeight="0px";
+        }
+      }
+
+
+     </script>
+
+  </body>
+</html>

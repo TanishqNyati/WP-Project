@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<htsml lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body onload="load()">
+    
+    <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="Images/sapling.png" width="120px">
+        <div class="logo-name">
+        <h2>PlantStation</h2>
+        </div>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="/" class="btn1">Home</a></li>
+          <li><a href="" class="btn1">Products</a></li> 
+          <li><a href="#footer" class="btn1">Contacts</a></li>
+          <li><a href="/account" class="btn1">Account</a></li>
+          <li><a href="/login" class="btn1">Login/Sign Up</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html">
+      <img src="Images/cart.png"  width="30px" height="30px">
+      </a>
+      <img src="Images/menu.png" class="menu-icon" 
+      onclick="menutoggle">
+    </div>  
+    </div>
+
+    <!------single product details-------->
+
+    <div class="small-container single product">
+        <div class="row">
+          
+           <div class="col-5 ">
+              <img src="Images/indian basil.jpg" width=100%>
+
+               
+
+           </div>
+
+           <div class="col-5 ">
+             <p>Plant</p>
+             <h1>Plant product</h1>
+             <h4>Rs 1500/-</h4>
+             <input type="number" value="1">
+             <br>
+             <a href="" class="btn" >Add to Cart</a>
+             <h3>Product Details  <i class="fa fa-indent"></i></h3>
+             <br>
+             <p>Holy basil (Ocimum tenuiflorum) is a plant that is native to India. It is commonly used in the traditional Indian medicine system, Ayurveda.
+            Holy basil is sometimes called "hot basil" because of its peppery taste. Chemicals in holy basil are thought to decrease pain and swelling. They also might lower blood sugar in people with diabetes. Holy basil oil might act as an antioxidant.</p>
+                
+        </div>
+        </div>
+    </div>
+
+    <!----title---->
+       <div class="small-container">
+           <div class="row row-2">
+               <h2>Related Products</h2>
+               <p>View More</p>
+           </div>
+       </div>
+
+
+
+    <!----Products---->
+   
+     <div class="small-container">
+        
+       <div class="row" id = "cardfield">
+        <div class="col-4">
+          <img src="Images/aloe vero.jpg">
+          <h3>Aloe Vera</h3>
+          <div class="rating">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+          </div>
+          <p>Rs 699/-</p>
+          <a href="" class="btn" onclick="addtocart(item3)">Add to cart &#8594;</a>
+        </div>
+     </div>
+
+     
+
+     
+
+    <!-----Footer----->
+    <div id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download our App</h3>
+            <p>Download app for android and ios devices.</p>
+            </div>
+          <div class="footer-col-2">
+            <div class="app-logo">
+              <img src="Images/play-store.png">
+              <img src="Images/app-store.png">
+              <p>Let's save the planet and plant more trees</p>
+              </div>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Return Policy</li>
+              <li>Join Prime</li>
+              <li>Blogs</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2020 - Planstation Limited</p>
+       </div>
+     </div>
+
+   <!---JS for toggle menu--->
+     <script>
+      var MenuItems = document.getElementById("MenuItems")
+      MenuItems.style.maxHeight="0px";
+      function menutoggle(){
+        if (MenuItems.style.maxHeight=="0px"){
+          MenuItems.style.maxHeight="200px";
+        }
+        else{
+          MenuItems.style.maxHeight="0px";
+        }
+      }
+     </script>
+     <script>
+         function load(){
+         let datafield = document.getElementById("cardfield");
+         const xhttp = new XMLHttpRequest();
+         xhttp.onload = function()
+         {
+             if(this.readyState==4 && this.status == 200)
+             {
+                 let data = this.responseText;
+                 let objects = JSON.parse(data);
+                 for(let i = 0; i<objects["Products"].length; i++)
+                 {
+                    let card=document.createElement("div");
+                    card.className="col-4";
+                    let img=document.createElement("img");
+                    let title=document.createElement("h3");
+                    let rate = document.createElement("div");
+                    let price = document.createElement("p");
+                    let cart = document.createElement("a");
+                    cart.className = "btn";
+                    cart.innerHTML = "Add to Cart &#8594";
+                    cart.href = "#";
+            
+                    rate.className = "rating";
+                    for(let j=0; j<objects["Products"][i]["star"]; j++)
+                    {
+                        let star = document.createElement("i");
+                        star.className = "fa fa-star";
+                        rate.appendChild(star);
+                    }
+                    img.src = objects["Products"][i]["img"];
+                    title.innerHTML =  objects["Products"][i]["Name"];
+                    price.innerHTML =  objects["Products"][i]["Price"];
+                    card.appendChild(img);
+                    card.appendChild(title);
+                    card.appendChild(rate);
+                    card.appendChild(price);
+                    card.appendChild(cart)
+                    datafield.appendChild(card);
+
+                 }
+             }
+
+         }
+         xhttp.open("GET", "product.json");
+         xhttp.send();
+         
+        }
+     </script>
+
+  </body>
+</html>
+
+

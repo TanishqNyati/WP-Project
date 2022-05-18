@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<htsml lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Your Account</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    
+    <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="Images/sapling.png" width="120px">
+        <div class="logo-name">
+        <h2>PlantStation</h2>
+        </div>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="/" class="btn1">Home</a></li>
+          <li><a href="" class="btn1">Products</a></li> 
+          <li><a href="/productDetails" class="btn1">Product Details</a></li>
+          <li><a href="#footer" class="btn1">Contacts</a></li>
+          <li><a href="/account" class="btn1">Account</a></li>
+          <li><a href="/login" class="btn1">Login/Sign Up</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html">
+      <img src="Images/cart.png" width="30px" height="30px">
+      </a>
+      <img src="Images/menu.png" class="menu-icon" 
+      onclick="menutoggle">
+    </div>  
+    </div>
+
+   
+    <!----Cart items details--->
+    
+
+
+    <!-----Footer----->
+    <div id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download our App</h3>
+            <p>Download app for android and ios devices.</p>
+            </div>
+          <div class="footer-col-2">
+            <div class="app-logo">
+              <img src="play-store.png">
+              <img src="app-store.png">
+              <p>Let's save the planet and plant more trees</p>
+              </div>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Return Policy</li>
+              <li>Join Prime</li>
+              <li>Blogs</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2020 - Planstation Limited</p>
+       </div>
+     </div>
+
+   <!---JS for toggle menu--->
+     <script>
+      var MenuItems = document.getElementById("MenuItems")
+      MenuItems.style.maxHeight="0px";
+      function menutoggle(){
+        if (MenuItems.style.maxHeight=="0px"){
+          MenuItems.style.maxHeight="200px";
+        }
+        else{
+          MenuItems.style.maxHeight="0px";
+        }
+      }
+     </script>
+
+  </body>
+</html>

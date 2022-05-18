@@ -1,0 +1,29 @@
+{
+   "Products":
+   [
+       {
+           "Name":"Dracena",
+           "Quantity":"3",
+           "Price":"Rs 1299/-",
+           "img":"dracena.jpg",
+           "star":5
+       },
+
+       {
+            "Name":"Aloe Vera",
+            "Quantity":"2",
+            "Price":"Rs 999/-",
+            "img":"aloe vero.jpg",
+            "star":5
+       },
+
+       {
+           
+            "Name":"Weeping fig",
+            "Quantity":"5",
+            "Price":"Rs 799/-",
+            "img":"weeping fig.jpg",
+            "star":2
+       }
+   ]
+}
